@@ -1,11 +1,3 @@
-/*
-* @Author: Kasper Sebb' brandt
-* @Date:   2018-10-24 20:31:59
-* @Last Modified by:   Kasper Sebb' brandt
-* @Last Modified time: 2018-11-26 20:57:14
-*
-* Server side render entry
-*/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { renderToString } from 'react-dom/server';

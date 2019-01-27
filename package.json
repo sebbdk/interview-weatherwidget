@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "build": "yarn clean && webpack --mode production --progress --colors",
-    "ghpages": "yarn build && mv dist/* ./",
     "clean": "rm -rf dist",
     "start": "webpack-dev-server --progress --colors --host 0.0.0.0",
-    "serve": "http-server ./dist -p 8081"
+    "serve": "http-server ./dist -p 8081",
+    "build": "yarn clean && webpack --mode production --progress --colors",
+    "build:serve": "npm run build && npm run serve"
   },
   "dependencies": {
     "@babel/core": "^7.1.2",

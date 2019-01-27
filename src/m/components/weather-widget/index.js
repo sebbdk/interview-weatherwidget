@@ -17,11 +17,10 @@ function getWeather(city = 'Copenhagen') {
       .then(function(myJson) {
         a(myJson);
       }).catch(err => {
-        console.error('handle me please...', err);
+        console.error('Handle me please...', err);
       });
   });
 }
-
 
 export class WeatherWidget extends Component {
   componentDidMount() {
