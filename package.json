@@ -1,0 +1,42 @@
+{
+  "scripts": {
+    "build": "yarn clean && webpack --mode production --progress --colors",
+    "ghpages": "yarn build && mv dist/* ./",
+    "clean": "rm -rf dist",
+    "start": "webpack-dev-server --progress --colors --host 0.0.0.0",
+    "serve": "http-server ./dist -p 8081"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "cssnano": "^4.1.7",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "jsx-loader": "^0.13.2",
+    "mini-css-extract-plugin": "^0.4.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss": "^7.0.5",
+    "postcss-loader": "^3.0.0",
+    "preact": "^8.3.1",
+    "preact-compat": "^3.18.4",
+    "react-dev-utils": "^6.1.1",
+    "react-dom": "^16.3.2",
+    "react-lazyload": "^2.3.0",
+    "react-markdown": "^4.0.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "static-site-generator-webpack-plugin": "medialaan/static-site-generator-webpack-plugin#58524c0",
+    "to-string-loader": "^1.1.5",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.22.0",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "devDependencies": {}
+}
