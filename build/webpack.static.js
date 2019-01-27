@@ -55,8 +55,7 @@ module.exports = (env, argv) => {
     plugins: [
       new StaticSiteGeneratorPlugin({
         paths: [
-          '/',
-          '/home'
+          '/'
         ],
         crawl: true,
         globals: {

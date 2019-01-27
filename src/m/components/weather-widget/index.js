@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import updateURLParameter from './update-url-param';
+import { degToCompass, dkDirections } from './deg-to-compass';
 
 function updateUrlCityParam(city = '') {
   window.history.replaceState('', '', updateURLParameter(window.location.href, "city", city));
@@ -21,9 +22,6 @@ function getWeather(city = 'Copenhagen') {
   });
 }
 
-function degreeToCardinalDirection(deg = 0) {
-  return deg.toString();
-}
 
 export class WeatherWidget extends Component {
   componentDidMount() {
@@ -42,7 +40,7 @@ export class WeatherWidget extends Component {
           city: resp.name,
           temperature: Math.round(resp.main.temp - 272.15) + '°C',
           humidity: resp.main.humidity,
-          wind: `${resp.wind.speed} m/s ${degreeToCardinalDirection(resp.wind.deg)}`,
+          wind: `${resp.wind.speed} m/s ${degToCompass(resp.wind.deg, dkDirections)}`,
           found: true
         });
       } else {
